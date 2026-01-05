@@ -5,6 +5,7 @@ import LandingPage from "./components/LandingPage";
 import ProductGrid from "./components/ProductGrid";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Accoutn from "./components/Account";
 
 
 function App() {
@@ -20,7 +21,6 @@ function App() {
 
        const rawProducts = Array.isArray(offers) ? offers : [offers];
 
-    // Фільтруємо, щоб залишити лише унікальні назви
     const uniqueProducts = rawProducts.filter((product, index, self) =>
         index === self.findIndex((p) => p.name === product.name)
     );
@@ -36,6 +36,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/Product" element={<ProductGrid products={products} />}></Route>
+          <Route path="/Account" element={<Accoutn/>}></Route>
         </Routes>
       </div >
     </BrowserRouter>
