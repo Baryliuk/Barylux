@@ -4,8 +4,9 @@ import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
 import ProductGrid from "./components/ProductGrid";
 import "./App.css";
+import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Accoutn from "./components/Account";
+
 
 
 function App() {
@@ -19,13 +20,13 @@ function App() {
         const result = parser.parse(xmlData);
         const offers = result.yml_catalog.shop.offers.offer;
 
-       const rawProducts = Array.isArray(offers) ? offers : [offers];
+        const rawProducts = Array.isArray(offers) ? offers : [offers];
 
-    const uniqueProducts = rawProducts.filter((product, index, self) =>
-        index === self.findIndex((p) => p.name === product.name)
-    );
+        const uniqueProducts = rawProducts.filter((product, index, self) =>
+          index === self.findIndex((p) => p.name === product.name)
+        );
 
-    setProducts(uniqueProducts);
+        setProducts(uniqueProducts);
       });
   }, [])
 
@@ -36,8 +37,8 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/Product" element={<ProductGrid products={products} />}></Route>
-          <Route path="/Account" element={<Accoutn/>}></Route>
         </Routes>
+        <Footer />
       </div >
     </BrowserRouter>
   )
