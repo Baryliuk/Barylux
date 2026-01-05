@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import landingPng from '../assets/Image_8jwvk58jwvk58jwv.png'
+import landingPng from '../assets/Image_8jwvk58jwvk58jwv.jpg'
 function LandingPage() {
     return (
         <div className="landing__wrap">

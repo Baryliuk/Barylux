@@ -4,7 +4,9 @@ import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
 import ProductGrid from "./components/ProductGrid";
 import "./App.css";
+import ScrollTop from "./components/ScrollTop";
 import Footer from "./components/Footer";
+import AboutUs from "./components/AboutUs";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
@@ -33,13 +35,16 @@ function App() {
   return (
     <BrowserRouter>
       <div className="wrapper">
+        <ScrollTop />
         <Header />
         <Routes>
+          <Route path="/About" element={<AboutUs/>}></Route>
           <Route path="/" element={<LandingPage />} />
           <Route path="/Product" element={<ProductGrid products={products} />}></Route>
         </Routes>
         <Footer />
       </div >
+
     </BrowserRouter>
   )
 }
