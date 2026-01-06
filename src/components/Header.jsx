@@ -6,8 +6,8 @@ function Header() {
             <div className="nav__bar">
                 <ul className="nav__list">
                     <Link to='/Product'><li className="nav__item">Магазин</li></Link>
-                    <Link to='/about'><li className="nav__item">Про бренд</li></Link>
-                    <li className="nav__item">Контакти</li>
+                    <Link to='/About'><li className="nav__item">Про бренд</li></Link>
+                   <Link to='/Contact'><li className="nav__item">Контакти</li></Link> 
                 </ul>
             </div>
         </div>

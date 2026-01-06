@@ -7,6 +7,7 @@ import "./App.css";
 import ScrollTop from "./components/ScrollTop";
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
+import Contact from "./components/Contact";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
@@ -41,6 +42,7 @@ function App() {
           <Route path="/About" element={<AboutUs/>}></Route>
           <Route path="/" element={<LandingPage />} />
           <Route path="/Product" element={<ProductGrid products={products} />}></Route>
+          <Route path="/Contact" element={<Contact/>}></Route>
         </Routes>
         <Footer />
       </div >
